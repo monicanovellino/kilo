@@ -1,27 +1,31 @@
-# =*- coding:utf-8-*-
-# A very simple Bottle Hello World app for you to get started with...
-from bottle import default_app, route, static_file
-from main import Main
+
+# -*- coding: utf-8 -*-
+# bottle_app.py
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+""" Tutorial Dois - Brincando de git.
+.. codeauthor:: Monica Novellino <monicanovellino@gmail.com>
+- Como criar repositorio no github
+- como clonar usando o comando git
+- como comitar usando o comando git
+Classes neste módulo:
+    :py:class:`Main ` Exemplo de classe qualquer
+Changelog
+---------
+.. versionadded::    20.07
+        Documentação do tutorial
+"""
+
+from bottle import default_app, route
+#from main import Main
 
 @route('/')
 def hello_world():
-    return 'Tutorial Dois - apredendo git e bottle!'
+    return 'Hello from Bottle!'
 
 @route('/oi')
 def oi_mundo():
     return 'Tutorial Dois - ensaiando uma nova rota!'
-
-@route('/vs')
-def versao():
-    return 'Tutorial Dois - versão do sistema: {}!'.format(Main().get_versao())
-
-@route('/doc/<filename:.*\.html>')
-def documento():
-    return static_file(filename, root='home/monicanovellino/desenvolvimento/kilo/docs/build/html', mimetype='text/html')
-
-@route('/doc/<filename:.*\.css>')
-def docu():
-    return static_file (filename, root='home/monicanovellino/desenvolvimento/kilo/docs/build/html/_static', mimetype='text/css')
 
 application = default_app()
 

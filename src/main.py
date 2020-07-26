@@ -24,17 +24,17 @@ Changelog
 class Main:
     """ classe exemplo.
         : param:versão deste exemplo
-
     """
 
     def __init__(self, versao="20.07"):
         self.versao = versao
-        #print ("classe exemplo, versao {}".format (versao))
+        print ("classe exemplo, versao {}".format (versao))
 
     def get_versao(self):
         """retorna a versao do sistema.
            :return: a versao do sistema
         """
         return self.versao
+
 if __name__ == "__main__":
     print (Main().get_versao())
