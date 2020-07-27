@@ -16,8 +16,8 @@ Changelog
         Documentação do tutorial
 """
 
-from bottle import default_app, route
-#from main import Main
+from bottle import default_app, route, static_file
+from main import Main
 
 @route('/')
 def hello_world():
@@ -26,6 +26,18 @@ def hello_world():
 @route('/oi')
 def oi_mundo():
     return 'Tutorial Dois - ensaiando uma nova rota!'
+
+@route("vs")
+def vs_mundo():
+    return 'Tutorial Dois - Versão do sistema: {}'.format(Main().get_versao())
+
+@route('/doc/<filename:re:.*\.html>')
+def doc_mundo(filename):
+    return static_file(filename, root='/home/monicanovellino/dev/kilo/docs/_build/html', mimetype='text/html')
+
+@route('/doc/<filename:re:.*\.css>')
+def css_mundo(filename):
+    return static_file(filename, root='/home/monicanovellino/dev/kilo/docs/_build/html/', mimetype='text/css')
 
 application = default_app()
 

@@ -10,7 +10,27 @@ Welcome to kilo's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+Modulo Main
+------------
+.. note::
+   Só gera a versao
 
+.. automodule:: main
+   :members:
+   :undoc-members:
+   :platform: web
+   :synopsis: Gera versão
+
+Modulo Gerenciador Http
+-----------------------
+:/oi:  diz oi
+:/doc: mostra a documentação
+
+.. automodule:: bottle_app
+   :members:
+   :undoc-members:
+   :platform: web
+   :synopsis: Gerencidor http.
 
 Indices and tables
 ==================
