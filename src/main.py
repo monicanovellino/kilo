@@ -11,7 +11,7 @@
 
 Classes neste módulo:
 
-    :py:class:`Main ` Exemplo de classe qualquer
+    :py:class:'Main' Exemplo de classe qualquer
 
 
 
@@ -32,7 +32,9 @@ class Main:
 
     def get_versao(self):
         """retorna a versao do sistema.
+
            :return: a versao do sistema
+
         """
         return self.versao
 

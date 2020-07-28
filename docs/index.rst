@@ -21,6 +21,28 @@ Modulo Main
    :platform: web
    :synopsis: Gera versão
 
+Modulo Vitollino
+----------------
+.. note::
+   Gerador de jogos do Superpython
+
+.. automodule:: vitollino.main
+   :members:
+   :undoc-members:
+   :platform: web
+   :synopsis: Gerador de Jogos
+
+Modulo Quarto
+--------------
+.. note::
+   Jogo do quarto trazido do Superpython
+
+.. automodule:: quarto
+   :members:
+   :undoc-members:
+   :platform: web
+   :synopsis: Jogo do Quarto
+
 Modulo Gerenciador Http
 -----------------------
 :/oi:  diz oi
